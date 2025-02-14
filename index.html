@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UNIS World</title>
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Widgets/widgets.css">
+<script type="text/javascript" src="lib/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="lib/big.min.js"></script>
+<script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+<script type="text/javascript" src="lib/jszip.min.js"></script>
+<script type="text/javascript" src="lib/core.min.js"></script>
+<script type="text/javascript" src="lib/geom.min.js"></script>
+<script type="text/javascript" src="lib/stroke.min.js"></script>
+<script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
+<script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
+<script type="text/javascript" src="lib/triangulator.min.js"></script>
+<script type="text/javascript" src="lib/viewmodel.min.js"></script>
+<script type="text/javascript" src="lib/viewhome.min.js"></script>
+<script type="text/javascript" src="lib/echarts.min.js"></script>
+<script type="text/javascript" src="lib/echarts-gl.min.js"></script>
+<script type="text/javascript" src="js/interlude.js"></script>
+<script type="text/javascript" src="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Cesium.js"></script>
+<script type="module" src="js/index.js"></script>
+<script>
+  var global = {};
+</script>
+</head>
+<body>
+  <div class="loading-screen">
+    <div class="loading-spinner"></div>
+    <p>loading......</p>
+  </div>
+  <div id="title" class="title">
+    <h3 class="noSelect">
+      <!-- <img alt="unis-logo" fetchpriority="high" decoding="async" data-nimg="fill" style="margin-top:3px;width:64px;color:transparent" src="unis-logo.svg"> World -->
+      UNIS World
+    </h3>
+  </div>
+  <div id="cesiumContainer"></div>
+  <div class="viewerShadow" style="box-shadow: inset 0 -100px 300px 80px #000;"></div>
+  <div id="yardGroupPanel" class="panel" style="width: 220px; top: 70px;left: 20px; visibility: hidden;">
+    <div class="panelTitle"><i class="fa-solid fa-warehouse"></i> Yards</div>
+    <div class="panelContent" style="height: 180px;">
+      <table id="yardList">
+      </table>
+    </div>
+    <div class="skeleton-container"></div>
+  </div>
+  <!-- <div id="linehaulGroupPanel" class="panel" style="width: 180px; top: 70px;right: 20px; visibility: hidden;">
+    <div class="panelTitle"><i class="fa-solid fa-truck-fast"></i> Linehauls</div>
+    <div class="panelContent" style="height: 180px;">
+      <table id="linehaulList">
+      </table>
+    </div>
+  </div> -->
+  <!-- <div id="yardImagePanel" class="panel" style="width: 240px; top: 310px;left: 20px; visibility: hidden;">
+    <div class="panelTitle"><i class="fa-solid fa-map-location-dot"></i></div>
+    <div class="panelContent" onclick="location.href = 'bay.html?name=Buena Park bay-1'">
+      <img style="width: 100%">
+      <i class="fa-solid fa-arrow-right-to-bracket"></i>
+    </div>
+  </div> -->
+  <div id="loginPanel" class="panel" style="width: 33%; top: 20%; left: 33%;">
+    <div class="panelTitle" style="height: 70px; padding: 10px"><i class="fa-solid fa-circle-user" style="font-size: 64px"></i></div>
+    <div class="panelContent">
+      <div id="username" class="loginInput">
+          <label><i class="fa-regular fa-envelope"></i> username</label>
+          <input value="admin">
+      </div>
+      <div id="password" class="loginInput">
+          <label><i class="fa-solid fa-key"></i> password</label>
+          <input type="password">
+      </div>
+      <button id="loginButton">Login</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>UNIS DIGITAL TWIN</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="lib/big.min.js"></script>
+  <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+  <script type="text/javascript" src="lib/jszip.min.js"></script>
+  <script type="text/javascript" src="lib/core.min.js"></script>
+  <script type="text/javascript" src="lib/geom.min.js"></script>
+  <script type="text/javascript" src="lib/stroke.min.js"></script>
+  <script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
+  <script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
+  <script type="text/javascript" src="lib/triangulator.min.js"></script>
+  <script type="text/javascript" src="lib/viewmodel.min.js"></script>
+  <script type="text/javascript" src="lib/viewhome.min.js"></script>
+  <script type="module" src="js/forklift.js"></script>
+</head>
+<body>
+  <div class="viewerShadow" style="box-shadow: inset 0 0 300px 150px #000;"></div>
+  <div id="title" class="title">
+    <div style="position:absolute; width: 48px; height:48px; left:20px">
+    <img alt="unis-logo" fetchpriority="high" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="unis-logo.svg">
+    </div>
+    <h3 class="noSelect"></h3>
+  </div>
+  <canvas id="viewerCanvas" tabIndex="1" width="0" height="0"></canvas>
+  <div class="panel" style="width: 110px; top: 70px;left: 20px; ">
+    <div class="panelTitle"><i class="fa-solid fa-warehouse"></i> Bays</div>
+    <div class="panelContent" style="height: 180px;">
+      <table id="bayList">
+      </table>
+    </div>
+  </div>
+  <div id="viewerProgressDiv" class="viewerProgressDiv">
+    <progress id="viewerProgress"  class="viewerComponent" value="0" max="200" style="width: 100%"></progress>
+    <label id="viewerProgressLabel" class="viewerComponent" style="margin-top: 2px; display: block; margin-left: 10px; color: #fff"></label>
+  </div>
+  
+  <div id="viewerNavigationDiv" class="viewerNavigationDiv">
+    <input id="aerialView" class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
+      <label class="viewerComponent" for="aerialView" style="visibility: hidden;">Aerial view</label>
+    <input id="virtualVisit" class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
+      <label class="viewerComponent" for="virtualVisit" style="visibility: hidden;">Virtual visit</label>
+    <!-- <select id="levelsAndCameras" class="viewerComponent" style="visibility: hidden;"></select> -->
+  </div>
+</body>
+</html>
